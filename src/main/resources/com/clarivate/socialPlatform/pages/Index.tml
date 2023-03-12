@@ -1,0 +1,25 @@
+<html t:type="layout" title="Index | socialPlatform"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+
+<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="row">
+    <div class="col-12">
+        <p>
+            <img src="${asset:context:images/apache-tapestry.png}" alt="${message:greeting}" title="${message:greeting}" width="600"/>
+        </p>
+        <h1 id="title">${message:greeting}</h1>
+        <p>
+            This is a small replica of social media platform that will have the following functionalities:
+            <ol>
+  				<li>Sign in and Sign up.</li>
+ 				<li>Create user friends.</li>
+  				<li>Post and Comment functionality</li>
+  				<li>Maintaining session</li>
+			</ol>
+        </p>
+    </div>
+</div>
+
+</html>

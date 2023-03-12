@@ -1,0 +1,25 @@
+<html t:type="loginLayout" title="Login | myFirstTapestry"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+<div class="row justify-content-md-center">
+    <div class="col-12">
+        <t:form t:id="login">
+            <h2>Please sign in</h2>
+            <div class="mb-3">
+                <t:textfield t:id="email" class="form-control" validate="required" placeholder="Email address"/>
+            </div>
+            <div class="mb-3">
+                <t:passwordfield t:id="password" class="form-control" validate="required" placeholder="Password"/>
+            </div>
+            <div class="mb-3"> 
+                <button type="t:submit">Sign in</button>
+            </div>
+        </t:form>
+        <span class="navbar-right" >
+            <t:pagelink page="index" class="nav-link btn btn-light">Create Account</t:pagelink>
+        </span>
+    </div>
+</div>
+
+</html>
