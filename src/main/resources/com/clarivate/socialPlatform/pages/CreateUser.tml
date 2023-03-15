@@ -1,0 +1,6 @@
+<html t:type="loginLayout" title="Create New Address"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	<h2>Please enter profile details</h2>
+    <t:beaneditform object="userCreation" submitlabel="submit"
+    reorder="username, email, password"/>
+</html>

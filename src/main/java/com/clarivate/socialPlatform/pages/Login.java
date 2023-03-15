@@ -13,6 +13,8 @@ import org.apache.tapestry5.corelib.components.PasswordField;
 import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
+import com.clarivate.socialPlatform.services.SocialMediaService;
+
 public class Login {
 
     private static final Logger logger = LogManager.getLogger(Login.class);
@@ -34,13 +36,15 @@ public class Login {
 
     @Property
     private String password;
+    
+    @Inject
+    private SocialMediaService service;
 
     void onValidateFromLogin() {
-        if (!email.equals("users@tapestry.apache.org"))
-            login.recordError(emailField, "Try with user: users@tapestry.apache.org");
-
-        if (!password.equals("Tapestry5"))
-           login.recordError(passwordField, "Try with password: Tapestry5");
+        if (!service.validate(email, password)) {
+            login.recordError(emailField, "Wrong email or password");
+            login.recordError(passwordField, "Wrong email or password");
+        }
     }
 
     Object onSuccessFromLogin() {
