@@ -138,6 +138,16 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- Added to save data in MYSQL using Hibaernate-->
+		<dependency>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-hibernate</artifactId>
+			<version>5.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

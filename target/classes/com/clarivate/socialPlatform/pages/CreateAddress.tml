@@ -1,6 +1,0 @@
-<html t:type="Layout" title="Create New Address"
-    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
-
-    <t:beaneditform object="address" submitlabel="message:submit-label"
-     reorder="honorific,firstName,lastName,street1,street2,city,state,zip,email,phone"/>
-</html>
