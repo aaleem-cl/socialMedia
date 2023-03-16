@@ -6,11 +6,8 @@
     
         <li><t:pagelink page="address/createPost">Click here to add your post</t:pagelink></li>
     
-    	<li><t:pagelink page="address/createPost">see your recent post</t:pagelink></li>
+    	<li><t:pagelink page="address/viewPost">see your recent post</t:pagelink></li>
     
-    <h3>ADD COMMENTS</h3>
-      <ul>
-        <li><t:pagelink page="address/createComment">Click here to add your COMMENT</t:pagelink></li>
-    </ul>
+    
     
 </html>

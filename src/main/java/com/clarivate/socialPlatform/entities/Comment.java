@@ -1,5 +1,6 @@
 package com.clarivate.socialPlatform.entities;
 
+import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ public class Comment {
 	private int commentId;
 	@Column(name="data")
     private String commentData;
+	
 	
 	public int getCommentId() {
 		return commentId;

@@ -1,5 +1,10 @@
 <html t:type="layout" title="Create new post"
     xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
-
-    <t:beaneditform object="viewpost" submitlabel="message:submit-label"/>
+	<h1>All the posts</h1>
+   
+        
+         <t:grid source="post" 
+        include="postDescription" />
+        <h4>Feel free to add your comments</h4>
+        <li><t:pagelink page="address/createComment">Click here to add your COMMENT</t:pagelink></li>
 </html>

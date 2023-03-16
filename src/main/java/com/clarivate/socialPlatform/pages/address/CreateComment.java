@@ -8,6 +8,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
 import com.clarivate.socialPlatform.entities.Comment;
+import com.clarivate.socialPlatform.entities.Post;
 import com.clarivate.socialPlatform.pages.Main;
 
 public class CreateComment {
@@ -23,7 +24,7 @@ public class CreateComment {
 	    @CommitAfter
 	    Object onSuccess()
 	    {
-	    	alertManager.success("Successfully posted!!");
+	    	alertManager.success("Successfully commented!!");
 	        session.persist(comment);
 
 	        return main;
