@@ -1,0 +1,5 @@
+<html t:type="layout" title="Create new post"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <t:beaneditform object="viewpost" submitlabel="message:submit-label"/>
+</html>

@@ -1,0 +1,10 @@
+<html t:type="layout" title="Create new post"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+<head>
+    <title>View Comments List</title>    
+</head>
+<t:loop source="comments" value="comment">
+    <p>${comment.commentId} - ${comment.commentData}</p>
+</t:loop>
+</html>
