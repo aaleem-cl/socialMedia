@@ -1,0 +1,9 @@
+<html t:type="layout" title="Create new post"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+	<h1>All the comments</h1>
+   
+   <t:loop source="comments" value="comment">
+    <p>${comment.id} - ${comment.content}</p>
+</t:loop>
+       
+</html>

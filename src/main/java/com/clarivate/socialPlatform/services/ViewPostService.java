@@ -1,5 +1,13 @@
 package com.clarivate.socialPlatform.services;
 
-public interface ViewPostService {
-public Object Data(int userId);
+import java.util.List;
+
+import com.clarivate.socialPlatform.entities.Post;
+
+public interface ViewPostService{
+	void addPost(Post post);
+    List<Post> getPosts();
+    void refresh();
+    
+    
 }

@@ -6,8 +6,8 @@
     
         <li><t:pagelink page="address/createPost">Click here to add your post</t:pagelink></li>
     
-    	<li><t:pagelink page="address/viewPost">see your recent post</t:pagelink></li>
+    	<li><t:pagelink page="address/viewPost">Click here to see All your posts</t:pagelink></li>
+    <li><t:pagelink page="address/commentCreate">Create Comment</t:pagelink></li>
     
-    
-    
+    <li><t:pagelink page="address/viewComment">view Comment</t:pagelink></li>
 </html>

@@ -2,9 +2,11 @@
     xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
 	<h1>All the posts</h1>
    
+   <t:loop source="posts" value="post">
+    <p>${post.postId} - ${post.postDescription}</p>
+</t:loop>
         
-         <t:grid source="post" 
-        include="postDescription" />
+       
         <h4>Feel free to add your comments</h4>
         <li><t:pagelink page="address/createComment">Click here to add your COMMENT</t:pagelink></li>
 </html>

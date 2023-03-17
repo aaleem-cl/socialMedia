@@ -19,7 +19,7 @@ public class CreatePost {
 		@Inject
 	    private Session session;
 	    @InjectPage
-	    private Posts main;
+	    private Posts posts;
 	    
 	    @CommitAfter
 	    Object onSuccess()
@@ -27,7 +27,7 @@ public class CreatePost {
 	    	alertManager.success("Successfully posted!!");
 	        session.persist(post);
 
-	        return main;
+	        return posts;
 	    }
 
 }
