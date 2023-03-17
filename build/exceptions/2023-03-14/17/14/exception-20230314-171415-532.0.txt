@@ -1,0 +1,277 @@
+EXCEPTION STACK:
+
+
+     Exception: org.apache.tapestry5.runtime.ComponentEventException
+       Message: org.hibernate.exception.DataException: could not execute statement
+       context: org.apache.tapestry5.internal.EmptyEventContext@5ccefd91
+     eventType: action
+      location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+     Exception: org.apache.tapestry5.ioc.internal.OperationException
+       Message: org.hibernate.exception.DataException: could not execute statement
+      location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+         trace: Handling traditional 'action' component event request for address/Create:beaneditform.form.
+                Triggering event 'action' on address/Create:beaneditform.form
+                Triggering event 'success' on address/Create:beaneditform.form
+
+     Exception: org.apache.tapestry5.runtime.ComponentEventException
+       Message: org.hibernate.exception.DataException: could not execute statement
+       context: org.apache.tapestry5.internal.EmptyEventContext@5ccefd91
+     eventType: success
+      location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+     Exception: javax.persistence.PersistenceException
+       Message: org.hibernate.exception.DataException: could not execute statement
+
+     Exception: org.hibernate.exception.DataException
+       Message: could not execute statement
+           SQL: n/a
+      SQLState: 22001
+     errorCode: 1406
+
+     Exception: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation
+       Message: Data truncation: Data too long for column 'post_description' at row 1
+      SQLState: 22001
+      dataSize: 0
+     errorCode: 1406
+         index: 0
+     parameter: true
+          read: false
+  transferSize: 0
+
+  Stack trace:
+
+  - com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+  - com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+  - com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+  - com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+  - com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+  - com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+  - org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+  - org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+  - org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+  - org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3196)
+  - org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3802)
+  - org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+  - org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+  - org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+  - org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+  - org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+  - org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+  - org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+  - org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+  - org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+  - org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:185)
+  - org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:128)
+  - org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+  - org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:99)
+  - org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:720)
+  - org.hibernate.internal.SessionImpl.persist(SessionImpl.java:706)
+  - $Session_461137a43aed6.persist(Unknown Source)
+  - $Session_461137a43ad88.persist(Unknown Source)
+  - com.clarivate.socialPlatform.pages.address.CreateAddress.advised$onSuccess_461137a43adf8(CreateAddress.java:26)
+  - com.clarivate.socialPlatform.pages.address.CreateAddress$Invocation_onSuccess_461137a43adf7.proceedToAdvisedMethod(Unknown Source)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:90)
+  - org.apache.tapestry5.hibernate.web.internal.CommitAfterWorker$1.advise(CommitAfterWorker.java:54)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - com.clarivate.socialPlatform.pages.address.CreateAddress.onSuccess(CreateAddress.java)
+  - com.clarivate.socialPlatform.pages.address.CreateAddress.dispatchComponentEvent(CreateAddress.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:918)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1103)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:58)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1048)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1045)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1298)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:158)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.triggerContextEvent(InternalComponentResourcesImpl.java:289)
+  - org.apache.tapestry5.corelib.components.Form.onAction(Form.java:570)
+  - org.apache.tapestry5.corelib.components.Form.dispatchComponentEvent(Form.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:918)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1103)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:58)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1048)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1045)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1298)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:158)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.internal.services.ComponentEventRequestHandlerImpl.handle(ComponentEventRequestHandlerImpl.java:79)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:47)
+  - $ComponentEventRequestHandler_461137a43aed5.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$36.handle(TapestryModule.java:2265)
+  - $ComponentEventRequestHandler_461137a43aed5.handle(Unknown Source)
+  - $ComponentEventRequestHandler_461137a43adfb.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:49)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:50)
+  - $ComponentRequestHandler_461137a43adfd.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:41)
+  - $ComponentRequestHandler_461137a43adfd.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:60)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:57)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1304)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:52)
+  - $ComponentRequestHandler_461137a43adfd.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_461137a43adc6.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:54)
+  - $Dispatcher_461137a43adc8.dispatch(Unknown Source)
+  - $Dispatcher_461137a43adbd.dispatch(Unknown Source)
+  - org.apache.tapestry5.http.modules.TapestryHttpModule$RequestHandlerTerminator.service(TapestryHttpModule.java:492)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:31)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:977)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:967)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - com.clarivate.socialPlatform.services.AppModule$1.service(AppModule.java:109)
+  - $RequestFilter_461137a43adb8.service(Unknown Source)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:110)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:100)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:124)
+  - $RequestHandler_461137a43adbe.service(Unknown Source)
+  - $RequestHandler_461137a43adb2.service(Unknown Source)
+  - org.apache.tapestry5.http.modules.TapestryHttpModule$HttpServletRequestHandlerTerminator.service(TapestryHttpModule.java:469)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:69)
+  - $HttpServletRequestFilter_461137a43adb1.service(Unknown Source)
+  - $HttpServletRequestHandler_461137a43adb4.service(Unknown Source)
+  - org.apache.tapestry5.http.internal.gzip.GZipFilter.service(GZipFilter.java:60)
+  - $HttpServletRequestHandler_461137a43adb4.service(Unknown Source)
+  - org.apache.tapestry5.http.modules.TapestryHttpModule$2.service(TapestryHttpModule.java:318)
+  - $HttpServletRequestHandler_461137a43adb4.service(Unknown Source)
+  - $HttpServletRequestHandler_461137a43adac.service(Unknown Source)
+  - org.apache.tapestry5.http.TapestryFilter.runFilter(TapestryFilter.java:178)
+  - org.apache.tapestry5.http.TapestryFilter.doFilter(TapestryFilter.java:225)
+  - org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+  - org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1594)
+  - org.eclipse.jetty.websocket.servlet.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:164)
+  - org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:202)
+  - org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1594)
+  - org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:506)
+  - org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+  - org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:580)
+  - org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+  - org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+  - org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+  - org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+  - org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1372)
+  - org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+  - org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:463)
+  - org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+  - org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+  - org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1294)
+  - org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+  - org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149)
+  - org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:51)
+  - org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+  - org.eclipse.jetty.server.Server.handle(Server.java:562)
+  - org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:406)
+  - org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:663)
+  - org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:398)
+  - org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+  - org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:319)
+  - org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+  - org.eclipse.jetty.io.SocketChannelEndPoint$1.run(SocketChannelEndPoint.java:101)
+  - org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:894)
+  - org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1038)
+  - java.base/java.lang.Thread.run(Thread.java:833)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: 
+                     method: POST
+                       path: /address/create.beaneditform.form
+                     locale: en_US
+                 serverName: localhost
+                 remoteHost: [0:0:0:0:0:0:0:1]
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+            Accept-Encoding: gzip, deflate, br
+            Accept-Language: en-US,en;q=0.9
+              Cache-Control: max-age=0
+                 Connection: keep-alive
+             Content-Length: 1766
+               Content-Type: application/x-www-form-urlencoded
+                     Cookie: csrftoken=EVEW8m1NVz8sJ2DcuY0StbBTY4F6bQIR; JSESSIONID=node0p0edj590gscln2k36ey3mw6m0.node0
+                       Host: localhost:8080
+                     Origin: http://localhost:8080
+                    Referer: http://localhost:8080/address/create
+             Sec-Fetch-Dest: document
+             Sec-Fetch-Mode: navigate
+             Sec-Fetch-Site: same-origin
+             Sec-Fetch-User: ?1
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.69
+                  sec-ch-ua: "Chromium";v="110", "Not A(Brand";v="24", "Microsoft Edge";v="110"
+           sec-ch-ua-mobile: ?0
+         sec-ch-ua-platform: "Windows"
+
+Parameters:
+            postDescription: BENGALURU: The upcoming assembly elections is shaping up to be the toughest challenge JD(S) has ever faced in electoral politics, as both Congress and BJP are threatening to make huge dents in its Vokkaliga vote bank in the Old Mysuru region. Ever since its inception, JD(S) has won 70-80% of its seats from the region. Of the 27 seats it won in 2008, 19 came from the region (excluding Bengaluru). In 2013, the region elected 30 of the party’s 40 MLAs. Even in 2018, of the 37 seats it won, 31 were from the region. These figures demonstrate that the survival of the party hinges on the support it evokes from the Vokkaliga community. The party has been able to keep its citadel intact largely due to the absence of BJP. In 2008, it won 19 seats, the fewest till date, despite facing a severe backlash for betraying BJP. The saffron party was too nascent in the state to capitalise on the sympathy factor. In 2013, the regional outfit benefited from the split in BJP, after former chief minister BS Yediyurappa formed Karnataka Janata Paksha.
+                 t:formdata: b0lnxzjmyGXohC7jl7kzIg56r+g=:H4sIAAAAAAAA/7WUy0oDMRSGY0EUuvACKu5UKl7AGbR1UxeitV5KLYWirkQyM6d1dCaJSXpb6MqFvoQv4GXpUoQuxI2vID6AGxU3ujDTVrQIWiuuEkL+8/05f5KTe9ScH0QD2LI4CKFHOGAJYQMwAcuWacpdzZtQjgRHYcozGmbY3ARNYgZC8uKkZlIOjm2o0WWUAJFCm1X6aFkWSHJgmMNae8J/XDjv9SFUYPlRNPQzUXMoZR5WqxcbV4LAxANLjyx0H0//Pyp4Oby/GHw6RRVUCI3XgWKcMuCy+NHWhXqhyaq02toUyCyLkpzNKXHVhliHb+c2qI/5UFMctb5zJOqMb+Ec1h1MMnpKcptkpgpMojZGhZwDYXKbSZuSfAD1e1D9M2bWoea2CEsoyLQNjuX5nfzWr4EFaDOGWsSmnPc0FaODKyX/XdfVa9md36REcuoksAs7aA+1/MnQzG8NqYKmiimVNVxbCIUqnVmh9PPRzd+CXGowyIijytdE6a5e7PYt9rz8/x0O1T6Xuv+CaAN/wddzbizHDq/XHw/K8DfU4TyJjQQAAA==
+
+SYSTEM INFORMATION:
+
+Memory:
+    1,522,557,744 bytes free
+    2,411,724,800 bytes total
+    8,518,631,424 bytes max
+
+45 Threads:
+                                                                                  Reference Handler RUNNABLE, daemon, priority 10
+                                                                                          Finalizer WAITING, daemon, priority 8
+                                                                                  Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                                    Attach Listener RUNNABLE, daemon
+                                                                                Notification Thread RUNNABLE, daemon, priority 9
+                                                                                               main WAITING
+                                                                                   qtp1567145551-18 TIMED_WAITING
+  qtp1567145551-19-acceptor-0@58eff4e3-ServerConnector@466fd19b{HTTP/1.1, (http/1.1)}{0.0.0.0:8080} RUNNABLE, priority 3
+                                                                                   qtp1567145551-21 TIMED_WAITING
+                                                                     Session-HouseKeeper-36f497b1-1 TIMED_WAITING
+                                                                                        Scanner-0-1 TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                   qtp1567145551-80 RUNNABLE
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                   qtp1567145551-86 TIMED_WAITING
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                   qtp1567145551-98 RUNNABLE
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                  qtp1567145551-102 RUNNABLE
+                                                                                  qtp1567145551-103 TIMED_WAITING
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                  qtp1567145551-108 RUNNABLE
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                  qtp1567145551-128 TIMED_WAITING
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                                                  qtp1567145551-134 TIMED_WAITING
+*                                                                                 qtp1567145551-138 RUNNABLE
+                                                                                  qtp1567145551-139 TIMED_WAITING
+                                                                                  qtp1567145551-140 TIMED_WAITING
+                                                                          Tapestry PeriodicExecutor TIMED_WAITING, daemon
+                                                              mysql-cj-abandoned-connection-cleanup TIMED_WAITING, daemon
+                                                        Hibernate Connection Pool Validation Thread TIMED_WAITING, daemon
+                                                                                     Common-Cleaner TIMED_WAITING, daemon, priority 8

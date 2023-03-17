@@ -1,0 +1,9 @@
+<html t:type="layout" title="Create new post"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    <t:form t:id="commentForm">
+    <p><label for="postId">Post ID:</label><t:textfield t:id="postId" value="postId" /></p>
+    <p><label for="commentDescription">Comment:</label><t:textfield t:id="content" value="content" /></p>
+    <p><button type="submit">Create Comment</button></p>
+    </t:form>
+</html>

@@ -1,9 +1,6 @@
 package com.clarivate.socialPlatform.pages;
 
-import java.time.ZonedDateTime;
-
 import org.apache.logging.log4j.LogManager;
-
 import org.apache.logging.log4j.Logger;
 import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.InjectComponent;
@@ -13,7 +10,13 @@ import org.apache.tapestry5.corelib.components.PasswordField;
 import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
+
+import com.clarivate.socialPlatform.entities.Post;
+
+
+
 import com.clarivate.socialPlatform.services.SocialMediaService;
+
 
 public class Login {
 
@@ -50,7 +53,7 @@ public class Login {
     Object onSuccessFromLogin() {
         logger.info("Login successful!");
         alertManager.success("Welcome aboard!");
-        return Index.class;
+        return Post.class;
     }
 
     void onFailureFromLogin() {

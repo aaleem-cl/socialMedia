@@ -1,0 +1,13 @@
+<html t:type="layout" title="Your page"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+    
+	<h1>POST</h1>
+    
+        <li><t:pagelink page="address/createPost">Click here to add your post</t:pagelink></li>
+    
+    	<li><t:pagelink page="address/viewPost">Click here to see All your posts</t:pagelink></li>
+    <li><t:pagelink page="address/commentCreate">Create Comment</t:pagelink></li>
+    
+    <li><t:pagelink page="address/viewComment">view Comment</t:pagelink></li>
+</html>

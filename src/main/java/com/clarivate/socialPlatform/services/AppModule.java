@@ -1,5 +1,7 @@
 package com.clarivate.socialPlatform.services;
 
+import java.io.IOException;
+
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.commons.MappedConfiguration;
 import org.apache.tapestry5.commons.OrderedConfiguration;
@@ -16,10 +18,14 @@ import org.apache.tapestry5.ioc.services.SymbolProvider;
 import org.apache.tapestry5.modules.Bootstrap4Module;
 import org.slf4j.Logger;
 
+
+import com.clarivate.socialPlatform.services.serviceimpl.CommentServiceImpl;
+import com.clarivate.socialPlatform.services.serviceimpl.ViewPostServiceImpl;
 import com.clarivate.socialPlatform.services.serviceimpl.SocialMediaServiceImpl;
 
 import java.io.IOException;
 import java.util.UUID;
+
 
 /**
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to
@@ -29,8 +35,9 @@ import java.util.UUID;
 public class AppModule {
 
     public static void bind(ServiceBinder binder) {
-        // binder.bind(MyServiceInterface.class, MyServiceImpl.class);
-
+         //binder.bind(MyServiceInterface.class, MyServiceImpl.class);
+         binder.bind(ViewPostService.class, ViewPostServiceImpl.class);
+         binder.bind(CommentService.class, CommentServiceImpl.class);
         // Make bind() calls on the binder object to define most IoC services.
         // Use service builder methods (example below) when the implementation
         // is provided inline, or requires more initialization than simply
