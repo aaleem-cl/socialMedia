@@ -5,13 +5,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.apache.tapestry5.annotations.Parameter;
 
 import org.apache.tapestry5.beaneditor.NonVisual;
 import org.apache.tapestry5.beaneditor.Validate;
 
 @Entity
+
 @Table(name = "User_Creation")
+
 public class UserCreation {
 	@Id
 	@Column(name = "user_id")
@@ -24,6 +29,9 @@ public class UserCreation {
 	@Validate("required, minlength=5")
 	String username;
 	@Validate("required, minlength=8, maxlength=20")
+
+	@Parameter("passwordfield")
+
 	String password;
 
 	public Integer getUserId() {
@@ -63,4 +71,6 @@ public class UserCreation {
 		this.password = password;
 	}
 
+
 }
+

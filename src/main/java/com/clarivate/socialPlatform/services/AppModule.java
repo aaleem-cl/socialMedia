@@ -18,9 +18,13 @@ import org.apache.tapestry5.ioc.services.SymbolProvider;
 import org.apache.tapestry5.modules.Bootstrap4Module;
 import org.slf4j.Logger;
 
+
 import com.clarivate.socialPlatform.services.serviceimpl.CommentServiceImpl;
 import com.clarivate.socialPlatform.services.serviceimpl.ViewPostServiceImpl;
+import com.clarivate.socialPlatform.services.serviceimpl.SocialMediaServiceImpl;
 
+import java.io.IOException;
+import java.util.UUID;
 
 
 /**
@@ -38,6 +42,7 @@ public class AppModule {
         // Use service builder methods (example below) when the implementation
         // is provided inline, or requires more initialization than simply
         // invoking the constructor.
+    	   binder.bind(SocialMediaService.class, SocialMediaServiceImpl.class);
     }
 
     public static void contributeFactoryDefaults(MappedConfiguration<String, Object> configuration) {

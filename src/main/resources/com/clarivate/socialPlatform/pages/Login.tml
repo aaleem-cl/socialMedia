@@ -17,7 +17,7 @@
             </div>
         </t:form>
         <span class="navbar-right" >
-            <t:pagelink page="index" class="nav-link btn btn-light">Create Account</t:pagelink>
+            <t:pagelink page="createUser" class="nav-link btn btn-light">Create Account</t:pagelink>
         </span>
     </div>
 </div>
