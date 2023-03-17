@@ -18,7 +18,7 @@ import org.apache.tapestry5.ioc.services.SymbolProvider;
 import org.apache.tapestry5.modules.Bootstrap4Module;
 import org.slf4j.Logger;
 
-import com.clarivate.socialPlatform.services.serviceimpl.ViewPostServiceImpl;
+
 
 /**
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to

@@ -47,7 +47,7 @@ public class Login {
     Object onSuccessFromLogin() {
         logger.info("Login successful!");
         alertManager.success("Welcome aboard!");
-        return Main.class;
+        return Post.class;
     }
 
     void onFailureFromLogin() {

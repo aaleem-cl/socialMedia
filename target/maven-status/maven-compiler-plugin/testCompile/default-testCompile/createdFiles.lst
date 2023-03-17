@@ -1,0 +1,4 @@
+com\clarivate\socialPlatform\tapestry\integration\pages\NavigationTest.class
+com\clarivate\socialPlatform\tapestry\integration\pages\LoginTest.class
+com\clarivate\socialPlatform\tapestry\RunWithJetty.class
+com\clarivate\socialPlatform\unit\ClassTest.class

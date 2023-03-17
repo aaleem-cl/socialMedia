@@ -10,8 +10,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
 
 import com.clarivate.socialPlatform.entities.Post;
-import com.clarivate.socialPlatform.pages.Main;
-
+import com.clarivate.socialPlatform.pages.Posts;
 public class CreatePost {
 	@Property
     private Post post;
@@ -20,7 +19,7 @@ public class CreatePost {
 		@Inject
 	    private Session session;
 	    @InjectPage
-	    private Main main;
+	    private Posts main;
 	    
 	    @CommitAfter
 	    Object onSuccess()

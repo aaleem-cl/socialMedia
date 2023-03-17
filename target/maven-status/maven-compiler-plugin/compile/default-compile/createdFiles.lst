@@ -1,0 +1,14 @@
+com\clarivate\socialPlatform\pages\Error404.class
+com\clarivate\socialPlatform\pages\Index.class
+com\clarivate\socialPlatform\pages\Login.class
+com\clarivate\socialPlatform\pages\address\ViewPost.class
+com\clarivate\socialPlatform\services\DevelopmentModule.class
+com\clarivate\socialPlatform\entities\Post.class
+com\clarivate\socialPlatform\components\LoginLayout.class
+com\clarivate\socialPlatform\services\QaModule.class
+com\clarivate\socialPlatform\pages\Main.class
+com\clarivate\socialPlatform\components\Layout.class
+com\clarivate\socialPlatform\services\ViewPostService.class
+com\clarivate\socialPlatform\pages\address\CreatePost.class
+com\clarivate\socialPlatform\entities\Comment.class
+com\clarivate\socialPlatform\pages\address\CreateComment.class

@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
 
 import com.clarivate.socialPlatform.entities.Post;
+
 
 public class ViewPost {
 	

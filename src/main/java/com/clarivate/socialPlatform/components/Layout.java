@@ -40,7 +40,7 @@ public class Layout {
     }
 
     public String[] getPageNames() {
-        return new String[]{"Main"};
+        return new String[]{"Posts"};
     }
 
     public int getYear() {
