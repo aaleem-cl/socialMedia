@@ -1,0 +1,8 @@
+<html t:type="layout" title="Show Relation"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+    <h2>Viewing all the Relations</h2>
+
+   
+    <t:loop source="relations" value="relations"><p>${relations.userId1} - ${relations.userId2}</p></t:loop>
+    
+</html>

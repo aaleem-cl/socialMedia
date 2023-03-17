@@ -8,18 +8,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.beaneditor.NonVisual;
 
 @Entity
 @Table(name="user_relations")
 public class Relations {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@NonVisual
+	public int relationId;
 	@Column(name="userId1")
 	@Persist
-	private int userId1;
+	public int userId1;
 	@Column(name="userId2")
 	@Persist
-	private int userId2;
+	public int userId2;
 	
 	public int getUserId1() {
 		return userId1;
@@ -32,6 +35,12 @@ public class Relations {
 	}
 	public void setUserId2(int userId2) {
 		this.userId2 = userId2;
+	}
+	public int getRelationId() {
+		return relationId;
+	}
+	public void setRelationId(int relationId) {
+		this.relationId = relationId;
 	}
 	
 		

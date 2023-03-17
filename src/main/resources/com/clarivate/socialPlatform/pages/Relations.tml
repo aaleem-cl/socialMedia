@@ -11,7 +11,13 @@
 </div>
 
 <ul>
-	<li><t:pagelink page="address/createrelations">Create new relation</t:pagelink></li>
+	<li><t:pagelink page="address/createrelations">Create New Relation</t:pagelink></li>
+	
+</ul>
+
+<ul>
+	<li><t:pagelink page="address/viewrelations">view New Relation</t:pagelink></li>
+	
 </ul>
 
 </html>	
