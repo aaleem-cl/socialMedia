@@ -1,0 +1,23 @@
+<html t:type="layout" title="Relations"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+      xmlns:p="tapestry:parameter">
+
+<div class="row">
+    <div class="col-12">
+        <h1>User Relations Page</h1>
+    </div>
+    
+    
+</div>
+
+<ul>
+	<li><t:pagelink page="address/createrelations">Create new relation</t:pagelink></li>
+</ul>
+
+</html>	
+
+	
+	
+	
+	
+	
